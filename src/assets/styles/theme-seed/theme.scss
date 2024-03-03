@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+//? Clase core con los mixin para crear el tema
+@include mat.core();
+//? Para los bordes de los focus indicators
+@include mat.strong-focus-indicators(
+  (
+    border-style: dotted,
+    border-width: 4px,
+    border-radius: 50px,
+  )
+);
+
+//? IMPORTACIONES
+@import "./typography";
+@import "./palette";
+
+//? TEMAS Y CONFIGURACION
+//* Light mode
+$angular-material-test-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-material-test-primary,
+      accent: $angular-material-test-accent,
+      warn: $angular-material-test-warn,
+    ),
+    typography: $angular-material-typography-montserrat,
+    density: 0,
+    //* Es como estan de juntos los elementos , solo hay (0 , -1, -2 ,-3) https://samuel-d-meyer.medium.com/angular-material-15-16-density-e1da3dffbf83
+  )
+);
+//* Dark mode
+$angular-material-test-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $angular-material-test-dark-primary,
+      accent: $angular-material-test-dark-accent,
+      warn: $angular-material-test-warn,
+    ),
+    typography: $angular-material-typography,
+    density: -3,
+    //* Es como estan de juntos los elementos , solo hay (0 , -1, -2 ,-3) https://samuel-d-meyer.medium.com/angular-material-15-16-density-e1da3dffbf83
+  )
+);
+
+//? Para los bordes de los focus indicators
+@include mat.strong-focus-indicators-theme(purple);
+
+//? Aplica los temas a todos los componentes
+//* Tema por defecto (light)
+// @media (prefers-color-scheme: light) { //?Podemos hacer temas dependiendo de la configuracion del explorador
+@include mat.all-component-themes($angular-material-test-theme);
+// }
+//* Tema dark --> esta clase se pone en <html lang="en" class="dark-theme">
+// https://octoperf.com/blog/2021/01/08/angular-material-multiple-themes/#create-a-theme-switching-button
+//!Mirar error de tema duplicado
+// @media (prefers-color-scheme: dark) {//?Podemos hacer temas dependiendo de la configuracion del explorador
+.dark-theme {
+  @include mat.all-component-themes($angular-material-test-dark-theme);
+}
+// }
+
+//TODO ENLACES
+// https://material.angular.io/guide/theming
+// https://github.com/angular/components/tree/main/guides

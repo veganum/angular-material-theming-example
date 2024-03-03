@@ -1,0 +1,78 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+// .sidenav-container, .sidenav-content {
+//   padding: 16px;
+// }
+
+.title {
+  margin-left: 20px;
+}
+
+.title-nav-item {
+  // background-color: #3f51b5;
+  // color: white !important;
+  font-weight: bold;
+  font-size: larger;
+  border-bottom: 1px solid black;
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+table .mat-table {
+  width: 80%;
+  margin-top: 50px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mat-spinner {
+    margin: 50px;
+  }
+}
+
+.divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

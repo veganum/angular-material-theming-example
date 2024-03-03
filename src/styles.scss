@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/theme-seed/theme.scss';
+
+/* Puedes agregar estilos globales a este archivo, y también importar otros archivos de estilo */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+//TODO ENLACES
+// https://angular-material.dev/courses/m2-ng-components/m2-ng-components/create-custom-theme
