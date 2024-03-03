@@ -1,5 +1,12 @@
 # AngularMaterialThemingExample
 
+Este proyecto es una plantilla para poder crear temas usando Angular Material.
+
+<img width="948" alt="image" src="https://github.com/veganum/angular-material-theming-example/assets/55087820/648b63de-71a9-451b-af2c-3168d348a546">
+
+<img width="948" alt="image" src="https://github.com/veganum/angular-material-theming-example/assets/55087820/02d1f9fd-4793-47db-8669-8fced4decf54">
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server
